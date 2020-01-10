@@ -8,9 +8,6 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get '/' do
-    erb :root
-  end
 
   get '/posts' do
     erb :index
