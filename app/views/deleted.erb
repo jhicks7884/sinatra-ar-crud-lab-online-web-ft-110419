@@ -1,18 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
 
- <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Deleted</title>
-  <style>
-    input {
-      margin: 5px
-    }
-  </style>
-</head>
+   <%= @post.name %>
+  <%= @post.content %>
+  <h1> <%= @post.name %>was deleted</h1>
 
- <body>
-  <h1><%= @post.name %> was deleted</h1>
-  <p><a href="/posts">Back to Posts</a></p>
-</body>
-</html>
+   </body>
+</html> 
