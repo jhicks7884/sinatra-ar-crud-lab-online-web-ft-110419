@@ -1,4 +1,12 @@
-<% @posts.each do |post| %>
-  <p> Title: <%= post.name %></p>
-  <p> Content: <%= post.content%></p>
-<% end %>
+<form action="/articles/<%= @article.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+   <label>Title:</label>
+  <input type="text" id="title" name="article[title]" value="<%= @article.title%>">
+
+   <label>Content:</label>
+  <input type="text" id="content" name="article[content]" value="<%= @article.content%>" >
+
+   <input type="submit" name="submit" id="submit" >
+
+ </form>
