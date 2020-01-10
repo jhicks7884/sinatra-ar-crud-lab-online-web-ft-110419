@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-  </head>
-  <body>
-
-     <% @posts.all.each do |post| %>
-        <div>
-            <p><%= post.name%> </p>
-            <p><%= post.content %></p>
-        </div>
-    <% end %>
-
-   </body>
-</html> 
+<% @posts.each do |post| %>
+  <p> Title: <%= post.name %></p>
+  <p> Content: <%= post.content%></p>
+<% end %>
