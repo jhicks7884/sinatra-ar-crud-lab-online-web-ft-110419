@@ -1,21 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
 
- <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Posts - Blog</title>
-</head>
+     <% @posts.all.each do |post| %>
+        <div>
+            <p><%= post.name%> </p>
+            <p><%= post.content %></p>
+        </div>
+    <% end %>
 
- <body>
-  <h1>Posts</h1>
-
-   <ul>
-  <% @posts.each do |post|%>
-    <li>
-      <a href="/posts/<%= post.id %>"><%= post.name %></a>
-      <p><%=post.content %></p>
-    </li>
-  <% end %>
-  </ul>
-</body>
+   </body>
 </html> 
