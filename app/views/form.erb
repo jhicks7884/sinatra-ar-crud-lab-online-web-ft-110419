@@ -1,0 +1,31 @@
+<!doctype html>
+
+ <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>New Blog</title>
+  <style>
+    input {
+      margin: 5px
+    }
+  </style>
+</head>
+
+ <body>
+  <h1>Create A New Blog</h1>
+  <form action="<%= @post.new_record? ? "/posts" : "/posts/#{@post.id}" %>" method="post">
+    <!-- Persisted is the opposite of new_record? -->
+    <% if @post.persisted? %>
+      <input id="hidden" type="hidden" name="_method" value="patch">
+    <% end %>
+    <label for="post_name">Post Name: </label>
+    <input type="text" name="post[name]" id="name" value="<%= @post.name %>" /><br>
+
+     <label for="post_content">Post Content: </label>
+    <input type="text" name="post[content]" id="content" value="<%= @post.content %>" /><br>
+
+     <br>
+    <input type="submit" id="submit" value="submit"/>
+  </form>
+</body>
+</html>
